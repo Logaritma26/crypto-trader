@@ -1,5 +1,4 @@
-import websocket, json, pprint, numpy
-import config
+import json, pprint
 import operations
 from operations import ClientOperations
 from binance.enums import *

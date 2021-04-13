@@ -60,10 +60,11 @@ class OrderData:
     def order(self, side, quantity, order_type=ORDER_TYPE_MARKET):
         try:
             print("Sending order . . .")
-            order = self.USER.client.create_order(symbol=self.SYMBOL["global"], side=side, type=order_type, quantity=quantity)
+            order = self.USER.client.create_order(symbol=self.SYMBOL["global"], side=side, type=order_type,
+                                                  quantity=quantity)
             print("Order success : {}".format(order))
         except Exception as e:
-            print("An exception occured -> {}".format(e))
+            print("An exception occurred for order -> {}".format(e))
             return False
 
         return True

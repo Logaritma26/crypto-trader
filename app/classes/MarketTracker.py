@@ -48,6 +48,10 @@ class MarketTracker:
                 else:
                     self.LOWER_VALUES.update({api: order.RSI_DOWN})
 
+    def operate_rsi(self):
+        for parameter in self.RSI_PARAMETERS:
+            self.get_rsi_value(parameter)
+
     def get_rsi_value(self, parameter):
 
         try:
